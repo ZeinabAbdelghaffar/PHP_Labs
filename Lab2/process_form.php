@@ -48,11 +48,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($check == 0) {
             // Modify the thanks message
             echo "<h3>Contact Form Submission</h3>";
-            echo "<p>{$config['thank_you_message']}</p>";
+            echo "<p>Thank You for contacting us :)</p>";
             echo "<p><strong>Name:</strong> $name</p>";
             echo "<p><strong>Email:</strong> $email</p>";
             echo "<p><strong>Message:</strong> $message</p>";
             write_logs($name, $email);
+
+            // Read and display the contents of log.txt in a table
+            if (file_exists("log.txt")) {
+                $log_contents = file("log.txt");
+                if (!empty($log_contents)) {
+                    echo "<h3>Log Contents</h3>";
+                    echo "<table border='1'>";
+                    echo "<tr><th>Date</th><th>IP Address</th><th>Email</th><th>Name</th><th>Visits</th><th>Browser</th></tr>";
+                    foreach ($log_contents as $line) {
+                        $fields = explode(",", $line);
+                        echo "<tr>";
+                        foreach ($fields as $field) {
+                            echo "<td>$field</td>";
+                        }
+                        echo "</tr>";
+                    }
+                    echo "</table>";
+                } else {
+                    echo "Log file is empty.";
+                }
+            } else {
+                echo "Log file not found.";
+            }
         } else {
             $thanks = "";
         }
@@ -97,6 +120,10 @@ function process_message($message) {
 // Function to write logs
 function write_logs($name, $email) {
     global $thanks;
+    $ip_address = $_SERVER['REMOTE_ADDR'];
+    if ($ip_address === '::1') {
+        $ip_address = '127.0.0.1';
+    }
     if (!isset($_SESSION["is_visited"])) {
         $_SESSION["is_visited"] = true;
         $_SESSION["counter"] = 1; // Initialize counter
@@ -106,7 +133,7 @@ function write_logs($name, $email) {
     }
     if (file_exists("log.txt")) {
         $fp = fopen("log.txt", "a+");
-        $line = date("F d Y h:m a") . ", " . $_SERVER['REMOTE_ADDR'] . ", " . $email . ", " . $name . ", " .  $_SESSION["counter"] . PHP_EOL;
+        $line = date("F d Y h:m a") . ", " . $ip_address . ", " . $email . ", " . $name . ", " .  $_SESSION["counter"] . ", " . $_SERVER['HTTP_USER_AGENT'] . PHP_EOL; // Include the browser information
         fwrite($fp, $line);
         fclose($fp);
         $thanks = "Thank You";
@@ -115,6 +142,7 @@ function write_logs($name, $email) {
         fclose($fp);
     }
 }
+
 
 // Function to sanitize input data
 function convert_input($data) {
