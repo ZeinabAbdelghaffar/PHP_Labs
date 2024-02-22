@@ -17,6 +17,10 @@ This project implements a simple contact form using PHP for server-side processi
 - Displays error messages if any of the validations fail.
 - Outputs a thank you message and the submitted data if all validations pass.
 
+#### Output
+![form](https://github.com/ZeinabAbdelghaffar/PHP_Labs/assets/87963230/79dd2316-d6cb-4138-95c5-3b1c21b21966)
+![form](https://github.com/ZeinabAbdelghaffar/PHP_Labs/assets/87963230/2e38267d-8ef4-48ec-ad94-cc3da0efd7fb)
+
 ## Lab 2: PHP Contact Form with Logs Information
 
 This project implements a simple PHP contact form that collects user input (name, email, message) and logs the submissions to a text file (`log.txt`). The project consists of the following files:
@@ -33,3 +37,6 @@ This project implements a simple PHP contact form that collects user input (name
 - **Logging**: Form submissions are logged to a `log.txt` file, including the submission date, IP address, name, email, and visit count.
 - **Customization**: The contact form's behavior and appearance can be customized by editing the `config.php` and `style.css` files.
 - **Error Handling**: Error messages are displayed if the form submission fails validation, providing feedback to the user.
+
+#### Output
+![form](https://github.com/ZeinabAbdelghaffar/PHP_Labs/assets/87963230/7379dd98-cef7-4955-955d-cec770f61a62)
