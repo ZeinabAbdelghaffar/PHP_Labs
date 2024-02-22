@@ -25,11 +25,11 @@ This project implements a simple contact form using PHP for server-side processi
 
 This project implements a simple PHP contact form that collects user input (name, email, message) and logs the submissions to a text file (`log.txt`). The project consists of the following files:
 
-- `config.php`: Configuration file containing settings for the contact form.
-- `index.html`: HTML file containing the contact form.
-- `log.txt`: Text file where the contact form submissions are logged.
-- `process_form.php`: PHP file that processes the form submissions and logs the data.
-- `style.css`: CSS file for styling the contact form.
+- `index.html`: The HTML file containing the contact form markup.
+- `styles.css`: The CSS file containing styles for the contact form and output messages.
+- `process_form.php`: The PHP file that processes the form data and displays output messages.
+- `config.php`: The PHP file containing configuration settings for the contact form.
+- `read_output.php`: A PHP file that displays log information about visits to the contact form page.
 
 ### Features
 
@@ -39,4 +39,4 @@ This project implements a simple PHP contact form that collects user input (name
 - **Error Handling**: Error messages are displayed if the form submission fails validation, providing feedback to the user.
 
 #### Output
-![form](https://github.com/ZeinabAbdelghaffar/PHP_Labs/assets/87963230/7379dd98-cef7-4955-955d-cec770f61a62)
+![form](https://github.com/ZeinabAbdelghaffar/PHP_Labs/assets/87963230/66e0352b-16e3-438e-bd05-9048196c223c)
