@@ -71,6 +71,10 @@ This project implements a unique visits counter for a web page using object-orie
 
 - Ensure that PHP sessions are enabled on your server.
 - Use `$this->` when calling member variables and methods within a class.
+
+## Output 
+![image](https://github.com/ZeinabAbdelghaffar/PHP_Labs/assets/87963230/e5f8eac4-5161-481d-adb9-006fe640013d)
+
 ---
 # Lab4&Lab5 : OS39 Glasses Shop MySQL Project
 
