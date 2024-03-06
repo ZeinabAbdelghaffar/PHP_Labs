@@ -34,9 +34,9 @@ This project implements a simple PHP contact form that collects user input (name
 ### Features
 
 - **Form Validation**: Input fields are validated to ensure that the name, email, and message are provided and meet certain criteria (e.g., valid email format).
-- **Logging**: Form submissions are logged to a `log.txt` file, including the submission date, IP address, name, email, and visit count.
+- **Logging**: Form submissions are logged to a `log.txt` file, including the submission date, IP address, name, email, Browser and visit count.
 - **Customization**: The contact form's behavior and appearance can be customized by editing the `config.php` and `style.css` files.
 - **Error Handling**: Error messages are displayed if the form submission fails validation, providing feedback to the user.
 
 #### Output
-![form](https://github.com/ZeinabAbdelghaffar/PHP_Labs/assets/87963230/66e0352b-16e3-438e-bd05-9048196c223c)
+![image](https://github.com/ZeinabAbdelghaffar/PHP_Labs/assets/87963230/1a5fa37c-f75e-419d-99f7-df847e2c98a3)
