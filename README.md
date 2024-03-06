@@ -114,4 +114,8 @@ This project is a MySQL implementation for the OS39 Glasses Shop, including data
 - `DbHandler.php`: DbHandler class for database communication.
 - `index.php`: Main entry point of the project.
 - `items.sql`: SQL dump file for database creation and sample data insertion.
+
+## Output
+![image](https://github.com/ZeinabAbdelghaffar/PHP_Labs/assets/87963230/6518cf3b-9c81-458b-8c09-de48ae5a8a45)
+
 ---
