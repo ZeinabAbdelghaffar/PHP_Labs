@@ -40,3 +40,34 @@ This project implements a simple PHP contact form that collects user input (name
 
 #### Output
 ![image](https://github.com/ZeinabAbdelghaffar/PHP_Labs/assets/87963230/1a5fa37c-f75e-419d-99f7-df847e2c98a3)
+
+## Lab 3: Unique Visits Counter Using OOP PHP
+
+This project implements a unique visits counter for a web page using object-oriented programming (OOP) in PHP. The counter counts visits from different browsers as separate visits, while multiple visits from the same user/browser are counted as one visit.
+
+## File Structure
+
+- **Model**: Folder containing the `Counter` and `Visitor` classes.
+- **autoload.php**: Autoloads the classes when needed.
+- **config.php**: Stores settings such as the path of the file to store the visit count.
+- **counter.txt**: Text file to store the overall visit count.
+- **index.php**: Main file handling requests and displaying the visit count.
+
+## How It Works
+
+- The `Counter` class handles the logic for reading, incrementing, and saving the visit count.
+- The `Visitor` class checks if a visitor has already been counted using sessions.
+- Sessions are used to mark visits from the same browser and differentiate between users.
+
+## Usage
+
+1. Clone the repository.
+2. Set up your web server to point to the project directory.
+3. Visit the web page to see the visit count.
+
+## Note
+
+- Ensure that PHP sessions are enabled on your server.
+- Use `$this->` when calling member variables and methods within a class.
+
+
