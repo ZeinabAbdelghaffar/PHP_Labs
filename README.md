@@ -76,7 +76,7 @@ This project implements a unique visits counter for a web page using object-orie
 ![image](https://github.com/ZeinabAbdelghaffar/PHP_Labs/assets/87963230/e5f8eac4-5161-481d-adb9-006fe640013d)
 
 ---
-# Lab4&Lab5 : OS39 Glasses Shop MySQL Project
+# Lab4&Lab5 : Glasses Shop MySQL Project
 
 This project is a MySQL implementation for the OS39 Glasses Shop, including database creation, connection handling, and basic CRUD operations.
 
